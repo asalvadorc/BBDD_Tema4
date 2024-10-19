@@ -2,7 +2,6 @@
 
 
 **<u>1FN</u>**  
----  
   
 **Una taula està en 1FN si i només si els valors que componen els atributs
 d'una tupla són atòmics.**
@@ -17,11 +16,7 @@ Es descompon la taula en dos
 clau).
 
 
-
-
-
 **<u>2FN</u>**  
----  
   
 **Una taula està en 2FN si i només si compleix dues condicions:**
 
@@ -44,7 +39,6 @@ Es descompon la taula en dos
 
 
 **<u>3FN</u>**  
----  
   
 **Una taula es troba en 3FN si i només si es compleixen dues condicions:**
 
@@ -67,11 +61,9 @@ Es descompon la taula en dos
 
 
 **<u>FNBC</u>**  
----  
   
 **Una taula està en FNBC si i només si està en 1FN i les úniques dependències
-funcionals són aquelles en què la clau principal (i claus candidates)
-determinen un atribut.**
+funcionals són aquelles en què la clau principal (i claus candidates) determinen un atribut.**
 
 
 
