@@ -1,0 +1,21 @@
+site_url : https://asalvadorc.github.io/BBDD_Tema4
+site_name: BD - Bases de Dades
+theme: 
+  name: readthedocs
+  logo: assets/logocaminas.png
+
+extra_css:
+  - css/extra.css  
+nav:
+  - Tema 4 Normalització:
+    - Objectius: objectius.md
+    - 1. Introducció: 1_introducci.md
+    - 2. Primer Forma Normal (1FN): 2_primer_forma_normal_1fn.md
+    - 3.  Dependència Funcional: 3_dependncia_funcional.md
+    - 4. Segona Forma Normal (2FN): 4_segona_forma_normal_2fn.md
+    - 5. Dependència Funcional Transitiva: 5_dependncia_funcional_transitiva.md
+    - 6. Tercera Forma Normal (3FN): 6_tercera_forma_normal_3fn.md
+    - 7. Forma Normal Boyce-Codd (FNBC): 7_forma_normal_boycecodd_fnbc.md
+    - Resum: resum.md
+    - Exercicis: exercicis.md
+    
