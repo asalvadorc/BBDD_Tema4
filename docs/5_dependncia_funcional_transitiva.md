@@ -24,17 +24,15 @@ intermedi B.
 
 Per exemple, considerem tres atributs que formen part de la taula ALUMNES:
 
-> NUMMAT = núm. de matrícula.
-
-> GRUP = Grup assignat.
-
-> AULAGRUP = Aula assignada al grup.
+* NUMMAT = núm. de matrícula.
+* GRUP = Grup assignat.
+* AULAGRUP = Aula assignada al grup.
 
 
 
-**NUMMAT** →**GRUP | AULAGRUP**
+>>> **NUMMAT** →**GRUP | AULAGRUP**
 
-**GRUP** →**AULAGRUP**
+>>> **GRUP** →**AULAGRUP**
 
   
 L'atribut AULAGRUP és transitivament dependent de NUMMAT, ja que es pot
@@ -43,14 +41,6 @@ conèixer per mig de l'atribut NUMMAT i a través de l'atribut GRUP
 
 
 ![](T4_5_2.png)
-
-  
-
-
-
-****
-
-****
 
 
 

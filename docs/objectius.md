@@ -1,6 +1,4 @@
-# Objectius
-
-![](icon_objectives.gif)
+# ![](icon_objectives.gif) Objectius
 
 
 El procés de normalització consisteix en optimitzar les taules per eliminar

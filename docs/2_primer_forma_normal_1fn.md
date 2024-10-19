@@ -27,7 +27,7 @@ Els problemes que planteja són els següents:
 
   
 
-**Posar en 1FN**
+**<u>Posar en 1FN</u>**
 
 Per a passar a 1FN una taula que no ho estava **es descompon** en **dues**
 distintes:
@@ -72,7 +72,7 @@ següents atributs:
   
 
 
-_**Nota**_
+**<u>Nota</u>**
 
 També haurem de ser capaços de detectar que no està en 1FN quan tenim uns
 atributs multivaluats "encoberts". Per exemple, una variant de l'exemple

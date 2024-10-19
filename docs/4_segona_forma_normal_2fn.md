@@ -34,10 +34,10 @@ la clau (B). El graf de les dependències funcionals seria:
 
 **Si existeix una fletxa que ix de l'interior de la caixa que engloba la clau,
 aleshores la taula no està en 2FN.**
+****
 
 
-
-**Posar en 2FN**
+**<u>Posar en 2FN</u>**
 
 Per a convertir una taula que no està en segona forma normal a 2FN, es
 realitza una projecció i es crea:

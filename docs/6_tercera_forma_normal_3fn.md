@@ -49,7 +49,7 @@ dependents respecte de la clau A.
 
 
 
-**Posar en 3FN**
+**<u>Posar en 3FN</u>**
 
 Per a normalitzar una taula que no estiga en tercera forma normal, és a dir,
 que tinga dependències transitives, descompondrem la taula en més d'una taula:

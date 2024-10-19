@@ -11,23 +11,23 @@ valor de X es correspon amb un únic valor de Y.
 Per exemple, entre DNI i NOM existeix una dependència funcional, ja que el
 valor DNI es correspon amb un únic nom.
 
-**DNI** →**NOM**
+>>>**DNI** →**NOM**
 
 En aquest cas (suposant que el NOM és únic i no existeixen dos noms iguals)
 s'acompleix també la dependència
 
-**NOM** →**DNI**
+>>>**NOM** →**DNI**
 
 i ho podríem abreviar per
 
-**DNI** ←→**NOM**
+>>>**DNI** ←→**NOM**
 
 No sempre es dóna de forma biunívoca la dependència funcional entre dos
 atributs, es més, en pocs casos succeeix. Per exemple, entre els atributs DNI
 i ADREÇA existeix una dependència funcional ja que una persona identificada
 pel seu DNI viu en una única ADREÇA.
 
-**DNI** →**ADRECA**
+>>>**DNI** →**ADRECA**
 
 Però en aquest cas no es dóna la dependència en sentit invers, perquè en una
 ADREÇA viuen unes quantes persones. A més, l'adreça no ens diu ni tan sols la
@@ -46,7 +46,7 @@ d'una empresa. Entre els atributs DNI i SOU no existeix cap dependència
 funcional, ja que un individu pot guanyar sous distints en empreses distintes.
 Però si coneixem l'empresa en la qual treballa, sí que podem dir que:
 
-**DNI . EMPRESA** →**SOU**
+>>>**DNI . EMPRESA** →**SOU**
 
 L'operador punt "." representa l'expressió "junt amb" o "i" entre els dos
 atributs i l'operador barra "|" fa referència a l'expressió "o també".
@@ -54,7 +54,7 @@ atributs i l'operador barra "|" fa referència a l'expressió "o també".
 Per tant, podem dir que DNI "junt amb" EMPRESA determinen el SOU. I per a la
 dependència:
 
-**DNI** →**NOM | ADRECA**
+>>>**DNI** →**NOM | ADRECA**
 
 direm que amb el DNI es coneix el NOM "o també" l'ADREÇA.
 
@@ -71,7 +71,7 @@ subconjunt de X.
 
 Per exemple, una dependència funcional seria:
 
-**DNI . EMPRESA** →**NOM**
+>>>**DNI . EMPRESA** →**NOM**
 
 Però, lògicament, aquesta dependència no és total ja que NOM depèn
 funcionalment de DNI. Per això, a aquesta dependència s'anomena **dependència
@@ -79,7 +79,7 @@ parcial**.
 
 La dependència funcional total seria:
 
-**DNI . EMPRESA** →**SOU**
+>>>**DNI . EMPRESA** →**SOU**
 
 Ara sí, el SOU no depèn funcionalment de cap subconjunt.
 
@@ -103,7 +103,7 @@ Si existeixen dependències d'un conjunt d'atributs que no són la clau, aniran
 dins d'una caixa de línies discontínues per a no confondre-ho amb la clau
 principal de la taula.
 
-Exemple:
+**Exemple:**
 
 **A . B . C** →**M | S**  
 **M** →**N**  

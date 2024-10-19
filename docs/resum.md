@@ -1,7 +1,7 @@
 # Resum
 
 
-**1FN**  
+**<u>1FN</u>**  
 ---  
   
 **Una taula està en 1FN si i només si els valors que componen els atributs
@@ -20,7 +20,7 @@ clau).
 
 
 
-**2FN**  
+**<u>2FN</u>**  
 ---  
   
 **Una taula està en 2FN si i només si compleix dues condicions:**
@@ -43,7 +43,7 @@ Es descompon la taula en dos
 
 
 
-**3FN**  
+**<u>3FN</u>**  
 ---  
   
 **Una taula es troba en 3FN si i només si es compleixen dues condicions:**
@@ -66,10 +66,7 @@ Es descompon la taula en dos
 ![](T4_R_2.png)
 
 
-
-
-
-**FNBC**  
+**<u>FNBC</u>**  
 ---  
   
 **Una taula està en FNBC si i només si està en 1FN i les úniques dependències
