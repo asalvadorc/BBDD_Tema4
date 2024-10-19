@@ -5,7 +5,8 @@ theme:
   logo: assets/logocaminas.png
 
 extra_css:
-  - css/extra.css  
+  - css/extra.css
+  - img/favicon.ico 
 nav:
   - Tema 4 Normalització:
     - Objectius: objectius.md
