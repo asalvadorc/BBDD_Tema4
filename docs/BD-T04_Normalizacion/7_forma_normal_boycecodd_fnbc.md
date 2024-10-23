@@ -13,10 +13,11 @@ que se'ns podia haver escapat. Gràficament és el següent cas:
 ![](T4_7_1.png)
 
 
-
-**Una taula T està en FNBC si i només si està en 1FN i les úniques
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula T està en FNBC si i només si està en 1FN i les úniques
 dependències funcionals elementals són aquelles en les quals la clau principal
-(i claus candidates) determinen un atribut.**  
+(i claus candidates) determinen un atribut.
+</div><p></p>
 ---  
   
 
@@ -27,7 +28,7 @@ mig d'atributs secundaris que no eren clau.
 Si la clau està formada per un únic atribut i ja estava en 3FN, la taula està
 en FNBC (com succeïa amb la 2FN).
 
-_**Exemple**_ : Taula d'una guia de carrers
+<u>**Exemple**</u> : Taula d'una guia de carrers
 
 **GUIA DE CARRERS**
 
@@ -118,8 +119,8 @@ I quedarien amb la següent informació:
 
 **GUIA-ADREÇA**
 
-| **_ADREÇA_** |  **_CODPOST_**  
----|---  
+| **_ADREÇA_** |  **_CODPOST_** 
+---|---
 C/ Pez, 2  |  12580   
 C/ Luz, 5  |  12580   
 C/ Mar, 4  |  12005   

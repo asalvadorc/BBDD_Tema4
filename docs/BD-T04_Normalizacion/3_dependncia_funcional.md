@@ -1,11 +1,11 @@
 # 3. Dependència Funcional
 
-
-Un atribut o conjunt d'atributs **Y** depèn funcionalment de l'atribut o
-conjunt de atributs **X** , i es representa com **X → Y** , si i només si cada
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Un atribut o conjunt d'atributs <b>Y</b> depèn funcionalment de l'atribut o
+conjunt de atributs <b>X</b> , i es representa com <b>>X → Y</b> , si i només si cada
 valor de X es correspon amb un únic valor de Y.  
----  
-  
+</div>  
+<p></p>  
 
 
 Per exemple, entre DNI i NOM existeix una dependència funcional, ja que el
@@ -62,9 +62,11 @@ direm que amb el DNI es coneix el NOM "o també" l'ADREÇA.
 
 ## 3.2 Dependència Funcional Total
 
-Es diu que l'atribut **Y** té una **dependència funcional total** de l'atribut
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Es diu que l'atribut <b>Y</b> té una <b>dependència funcional total</b> de l'atribut
 **X** si té una dependència funcional de X i NO depèn funcionalment de cap
 subconjunt de X.  
+</div><p></p>
 ---  
   
 

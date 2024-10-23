@@ -8,10 +8,12 @@ atribut no primari només ha de conèixer-se a través de la clau principal o
 claus secundàries**. En un altre cas, estarà produint redundància d'informació
 amb les anomalies típiques que porta amb ella.
 
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
 Suposem tres subconjunts distints d'atributs A , B i C que pertanyen a una
-taula T, de manera que es compleixen les condicions:  **A** → **B** i **B**
-−∕→ **A** Es diu que C té una **dependència funcional transitiva** amb A o que
-és transitivament dependent de A si es compleix que **B** →**C**  
+taula T, de manera que es compleixen les condicions:  <b>A</b> → <b>B</b> i <b>B</b>
+−∕→ <b>A</b> Es diu que C té una <b>dependència funcional transitiva</b> amb A o que
+és transitivament dependent de A si es compleix que <b>B</b> →<b>C</b> 
+</div> 
 ---  
   
 Gràficament es pot mostrar:

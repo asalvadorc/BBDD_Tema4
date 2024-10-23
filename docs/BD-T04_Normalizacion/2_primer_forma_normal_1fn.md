@@ -1,9 +1,10 @@
 # 2. Primer Forma Normal (1FN)
 
-
- **Una taula està en 1FN si i només si els valors que componen cada
+ 
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula està en 1FN si i només si els valors que componen cada
 atribut d'una tupla són atòmics. És a dir, en un atribut no han d'aparèixer
-valors repetitius.**
+valors repetitius.</div>
 ---  
 
 
@@ -71,12 +72,13 @@ següents atributs:
 461  |  3,5   
   
 
-
-**<u>Nota</u>**
-
+<u>**Nota**</u> 
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
 També haurem de ser capaços de detectar que no està en 1FN quan tenim uns
 atributs multivaluats "encoberts". Per exemple, una variant de l'exemple
 anterior podria ser:
+</div>
+<p></p>
 
 **MATERIALS**
 

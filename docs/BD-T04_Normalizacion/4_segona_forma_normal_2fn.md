@@ -1,12 +1,13 @@
 # 4. Segona Forma Normal (2FN)
 
 
-
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
 Una taula es diu que està en _2FN_ si i només si compleix dues condicions:
-
-  * **Es troba en 1FN.**
-  * **Tot atribut secundari (aquells que no pertanyen a la clau principal, els que es troben fora de la caixa) depèn totalment (té una dependència funcional total) de la clau completa i, per tant, no d'una part d'ella.**
-
+<ul>
+    <li>Es troba en 1FN.</li>
+    <li>Tot atribut secundari (aquells que no pertanyen a la clau principal, els que es troben fora de la caixa) depèn totalment (té una dependència funcional total) de la clau completa i, per tant, no d'una part d'ella.</li>
+</ul>    
+</div><p></p>
   
 ---  
   

@@ -1,14 +1,14 @@
 # 6. Tercera Forma Normal (3FN)
 
 
-
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
 Una taula es diu que està en _3FN_ si i només si es compleixen dues
 condicions:
-
-  * **Es troba en 2FN.**
-  * **No existeixen atributs no primaris (atributs que no formen part de la clau principal) que són transitivament dependents de cada clau candidata de la taula.**
-
-  
+<ul>
+  <li>Es troba en 2FN.</li>
+  <li>No existeixen atributs no primaris (atributs que no formen part de la clau principal) que són transitivament dependents de cada clau candidata de la taula.</li>
+</ul>
+</div><p></p>  
 ---  
   
 Açò vol dir que un atribut secundari només es pot conèixer a través de la clau
