@@ -2,27 +2,29 @@
 
 
 **<u>1FN</u>**  
-  
-**Una taula està en 1FN si i només si els valors que componen els atributs
-d'una tupla són atòmics.**
-
+<div style="background-color: #d6eaf8; color: black; padding: 5px;">  
+Una taula està en 1FN si i només si els valors que componen els atributs
+d'una tupla són atòmics.
+</div><p></p>
 
 
 Es descompon la taula en dos
 
-1a.- Projecció de la clau junt amb els atributs que tenen valors atòmics.
+> 1a.- Projecció de la clau junt amb els atributs que tenen valors atòmics.
 
-2a.- Nova clau amb els atributs que tenen valors múltiples (cal idear una nova
+> 2a.- Nova clau amb els atributs que tenen valors múltiples (cal idear una nova
 clau).
 
 
 **<u>2FN</u>**  
   
-**Una taula està en 2FN si i només si compleix dues condicions:**
-
-  * **Està en 1FN.**
-  * **Tot atribut secundari (els que no pertanyen a la clau principal) depèn totalment (té una dependència funcional total) de la clau completa, i per tant, no d'una part d'ella.**
-
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula es diu que està en _2FN_ si i només si compleix dues condicions:
+<ul>
+    <li>Es troba en 1FN.</li>
+    <li>Tot atribut secundari (aquells que no pertanyen a la clau principal, els que es troben fora de la caixa) depèn totalment (té una dependència funcional total) de la clau completa i, per tant, no d'una part d'ella.</li>
+</ul>    
+</div><p></p>
 
 
 Es descompon la taula en dos
@@ -40,10 +42,14 @@ Es descompon la taula en dos
 
 **<u>3FN</u>**  
   
-**Una taula es troba en 3FN si i només si es compleixen dues condicions:**
-
-  * **Està en 2FN.**
-  * **No existeixen atributs no primaris (que no formen part de la clau) que són transitivament dependents d'una clau candidata (cada possible clau de la taula).**
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula es diu que està en _3FN_ si i només si es compleixen dues
+condicions:
+<ul>
+  <li>Es troba en 2FN.</li>
+  <li>No existeixen atributs no primaris (atributs que no formen part de la clau principal) que són transitivament dependents de cada clau candidata de la taula.</li>
+</ul>
+</div><p></p>  
 
 
 
@@ -62,9 +68,11 @@ Es descompon la taula en dos
 
 **<u>FNBC</u>**  
   
-**Una taula està en FNBC si i només si està en 1FN i les úniques dependències
-funcionals són aquelles en què la clau principal (i claus candidates) determinen un atribut.**
-
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula T està en FNBC si i només si està en 1FN i les úniques
+dependències funcionals elementals són aquelles en les quals la clau principal
+(i claus candidates) determinen un atribut.
+</div><p></p>
 
 
 Es descompon la taula en dos
