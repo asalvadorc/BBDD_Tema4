@@ -2,7 +2,7 @@
 
 
 <div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
-Una taula es diu que està en _3FN_ si i només si es compleixen dues
+Una taula es diu que està en 3FN si i només si es compleixen dues
 condicions:
 <ul>
   <li>Es troba en 2FN.</li>

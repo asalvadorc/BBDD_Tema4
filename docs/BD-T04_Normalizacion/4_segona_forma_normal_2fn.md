@@ -2,7 +2,7 @@
 
 
 <div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
-Una taula es diu que està en _2FN_ si i només si compleix dues condicions:
+Una taula es diu que està en 2FN si i només si compleix dues condicions:
 <ul>
     <li>Es troba en 1FN.</li>
     <li>Tot atribut secundari (aquells que no pertanyen a la clau principal, els que es troben fora de la caixa) depèn totalment (té una dependència funcional total) de la clau completa i, per tant, no d'una part d'ella.</li>
@@ -63,7 +63,7 @@ atributs secundaris implicats:
 
 
 **Exemple** : Taula amb les persones que treballen en diverses empreses amb
-el sou corresponent, amb els atributs:**DNI , NOM , EMPRESA , SOU**
+el sou corresponent, amb els atributs: **DNI , NOM , EMPRESA , SOU**
 
 Entre els atributs existeixen les dependències:
 
