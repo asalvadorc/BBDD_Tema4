@@ -77,9 +77,18 @@ El graf que mostra les dependències és el següent:
 
 ![](T4_4_4.png)
 
+
+
 És evident que la taula no es troba en 2FN, després de normalitzar s'obté:
 
 ![](T4_4_5.png)
+
+De manera que la representación de las tablas en el **modelo relacional** quedaría de la siguiente forma:
+
+```
+EMPLEADO(dni, empresa,sueldo)
+PERSONA(dni,nombre)
+```
 
 ****
 

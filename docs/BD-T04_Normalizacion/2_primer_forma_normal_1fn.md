@@ -14,13 +14,13 @@ descripció i les seues mides (la clau principal és el camp subratllat)
 
 **MATERIALS**
 
-_**COD-MAT**_ |  **DESCRIPCIÓ** |  **MIDES**  
+<u>**COD-MAT**</u> |  **DESCRIPCIÓ** |  **MIDES**  
 ---|---|---  
 039  |  Cargol  |  3,5 - 5 - 7 - 9   
 067  |  Arandella  |  2 - 5   
 461  |  Broca  |  2,5 - 3 - 3,5   
   
-Els problemes que planteja són els següents:
+Els problemes que planteja **el cam MIDES** són els següents:
 
   * La falta de espai en el camp per als valors que puguen aparèixer o, pel contrari el desaprofitament de l'atribut quan existeixen pocs valors. 
 
@@ -41,7 +41,7 @@ següents atributs:
   
 **MATERIALS**
 
-**COD-MAT** |  **DESCRIPCIÓ**  
+<u>**COD-MAT**</u> |  **DESCRIPCIÓ**  
 ---|---  
 039  |  Cargol   
 067  |  Arandella   
@@ -59,7 +59,7 @@ següents atributs:
 
 **MAT-MIDES**
 
-**COD-MAT** | **MIDA**  
+<u>**COD-MAT**</u> | **MIDA**  
 ---|---  
 039  |  3,5   
 039  |  5   
@@ -82,7 +82,7 @@ anterior podria ser:
 
 **MATERIALS**
 
-_**COD-MAT**_ |  **DESCRIPCIÓ** |  **MIDA1** | **MIDA2** |  **MIDA3** | **MIDA4**  
+<u>**COD-MAT**</u> |  **DESCRIPCIÓ** |  **MIDA1** | **MIDA2** |  **MIDA3** | **MIDA4**  
 ---|---|---|---|---|---  
 039  |  Cargol  |  3,5  |  5 |  7 |  9  
 067  |  Arandella  |  2  |  5 |  |   
