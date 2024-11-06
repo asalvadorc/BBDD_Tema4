@@ -83,16 +83,15 @@ El graf que mostra les dependències és el següent:
 
 ![](T4_4_5.png)
 
-De manera que la representación de las tablas en el **modelo relacional** quedaría de la siguiente forma:
+De manera que la representació de les taules al **model relacional** quedaria de la manera següent:
 
-```
-EMPLEADO(dni, empresa,sueldo)
-PERSONA(dni,nombre)
-```
-
-****
+<pre><cod>
+            EMPLEADO(<b>dni,empresa</b>,sueldo)
+            PERSONA(<b>dni</b>,nombre)
+</cod></pre>
 
 ****
+
 
 
 Llicenciat sota la  [Llicència Creative Commons Reconeixement NoComercial

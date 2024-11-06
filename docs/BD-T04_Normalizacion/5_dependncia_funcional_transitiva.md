@@ -2,19 +2,21 @@
 
 
 
-La dependència funcional transitiva s'aplica per a analitzar les taules en
-tercera forma normal (3FN). Consisteix bàsicament a considerar que **un
-atribut no primari només ha de conèixer-se a través de la clau principal o
-claus secundàries**. En un altre cas, estarà produint redundància d'informació
-amb les anomalies típiques que porta amb ella.
+La dependència funcional transitiva s'aplica per a analitzar les taules en tercera forma normal (3FN). Consisteix bàsicament a considerar que **un atribut no primari només ha de conèixer-se a través de la clau principal o claus secundàries** (atributs que, encara que no són claus principals, serveixen per identificar de manera única una fila en alguns contextos específics). En un altre cas, estarà produint redundància d'informació amb les anomalies típiques que porta amb ella.
+
+En termes simples, aquesta dependència passa quan un atribut no clau (o no primari) depèn indirectament de la clau principal mitjançant un altre atribut.
 
 <div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
-Suposem tres subconjunts distints d'atributs A , B i C que pertanyen a una
-taula T, de manera que es compleixen les condicions:  <b>A</b> → <b>B</b> i <b>B</b>
-−∕→ <b>A</b> Es diu que C té una <b>dependència funcional transitiva</b> amb A o que
-és transitivament dependent de A si es compleix que <b>B</b> →<b>C</b> 
+
+<b>Dependència transitiva:</b> A→B→C. Si A→B i B→C, aleshores diem que C depèn de forma transitiva de A.
 </div> 
 ---  
+<!--
+Suposem tres subconjunts distints d'atributs A , B i C que pertanyen a una
+taula T, de manera que es compleixen les condicions:  <b>A</b> → <b>B</b> i <b>B</b>
+−∕→ <b>A</b>. Es diu que C té una <b>dependència funcional transitiva</b> amb A o que
+és transitivament dependent de A si es compleix que <b>B</b> →<b>C</b> 
+--> 
   
 Gràficament es pot mostrar:
 

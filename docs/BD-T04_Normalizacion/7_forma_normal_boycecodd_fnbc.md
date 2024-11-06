@@ -32,7 +32,7 @@ en FNBC (com succeïa amb la 2FN).
 
 **GUIA DE CARRERS**
 
-**_ADREÇA_** |  **_CIUTAT_** |  **CODPOST**  
+**<u>ADREÇA</u>** |  **<u>CIUTAT</u>** |  **CODPOST**  
 ---|---|---  
 C/ Pez, 2  |  Benicarló  |  12580   
 C/ Luz, 5  |  Benicarló  |  12580   
@@ -119,7 +119,7 @@ I quedarien amb la següent informació:
 
 **GUIA-ADREÇA**
 
-| **_ADREÇA_** |  **_CODPOST_** 
+| **<u>ADREÇA</u>** |  **<u>CODPOST</u>** 
 ---|---
 C/ Pez, 2  |  12580   
 C/ Luz, 5  |  12580   
@@ -130,7 +130,7 @@ C/ Mar, 4  |  12500
 
 **GUIA-CODPOST**
 
-| **_CODPOST_** |  **CIUTAT**  
+| **<u>CODPOST</u>** |  **CIUTAT**  
 ---|---  
 12004  |  Castelló   
 12005  |  Castelló   
@@ -151,7 +151,12 @@ la miqueta de redundància que suposa no tenir-la en FNBC, pot ser fins i tot
 saludable. Per això s'ha comentat des del principi del tema la importància de
 normalitzar fins la 3FN, i la FNBC té una importància relativa.
 
-
+De manera que la representació de les taules al **model relacional** quedaria de la manera següent:
+<pre><cod>
+    GUIA-ADREÇA(<b>adreça,codpos</b>)
+    GUIA-CODPOST(<b>codpost</b>,ciutat)
+</cod></pre>
+****
 
 Llicenciat sota la  [Llicència Creative Commons Reconeixement NoComercial
 SenseObraDerivada 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/)

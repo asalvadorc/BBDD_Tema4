@@ -85,7 +85,12 @@ dues taules
 
 Les dues taules resultants sí que es troben en 3FN.
 
-
+De manera que la representació de les taules al **model relacional** quedaria de la manera següent:
+<pre><cod>
+    ALUMNES(<b>nummat</b>,grup)
+    GRUPS(<b>grup</b>,aulagrup)
+</cod></pre>
+****
 Llicenciat sota la  [Llicència Creative Commons Reconeixement NoComercial
 SenseObraDerivada 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/)
 
