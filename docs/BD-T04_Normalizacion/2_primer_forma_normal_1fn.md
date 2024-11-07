@@ -20,7 +20,7 @@ descripció i les seues mides (la clau principal és el camp subratllat)
 067  |  Arandella  |  2 - 5   
 461  |  Broca  |  2,5 - 3 - 3,5   
   
-Els problemes que planteja **el cam MIDES** són els següents:
+Els problemes que planteja **el camp MIDES** són els següents:
 
   * La falta de espai en el camp per als valors que puguen aparèixer o, pel contrari el desaprofitament de l'atribut quan existeixen pocs valors. 
 

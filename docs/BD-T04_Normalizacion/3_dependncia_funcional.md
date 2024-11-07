@@ -79,7 +79,7 @@ Però, lògicament, aquesta dependència no és total ja que NOM depèn
 funcionalment de DNI. Per això, a aquesta dependència s'anomena **dependència
 parcial**.
 
-La dependència funcional total seria:
+La **dependència funcional total** seria:
 
 >>>**DNI . EMPRESA** →**SOU**
 
@@ -87,9 +87,9 @@ Ara sí, el SOU no depèn funcionalment de cap subconjunt.
 
 És evident que si X està format únicament per un atribut, la dependència
 funcional serà total.
-
-Les dependències que ens interessen per a la normalització són sempre les
-dependències funcionals totals.
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Les dependències que ens interessen per a la normalització són sempre les dependències funcionals totals.
+</div></p>
 
 
 
@@ -107,6 +107,18 @@ principal de la taula.
 
 **Exemple:**
 
+![](T4_3_3_ej.png)
+
+
+
+Esta tabla refleja un conjunto de pedidos y cumple con las dependencias funcionales especificadas:
+
+* A,B,C→M,S: La combinación del **ID Cliente, Región e ID Producto** determina de manera única el **ID Pedido y la Fecha de Pedido**. 
+* M→N: Cada **ID de Pedido** tiene una cantidad asociada (**Cantidad**). 
+* B,C→O,R: La combinación de **Región e ID Producto** determina de manera única el **Nombre del Producto y el Precio Unitario** (puede variar según la región). 
+* O→P: El **Nombre del Producto** determina su **Categoría**. 
+* C→Q: El **ID de Producto** determina el **Impuesto por Región**, ya que depende del tipo de producto. 
+***
 **A . B . C** →**M | S**  
 **M** →**N**  
 **B . C** →**O | R**  
