@@ -91,6 +91,18 @@ De manera que la representació de les taules al **model relacional** quedaria d
     GRUPS(<b>grup</b>,aulagrup)
 </cod></pre>
 ****
+
+I a l'exemple vist a l'apartat 3.3 
+
+![](T4_3_1.png)
+
+La solució quedaria així:
+
+![](T4_6ej.png) 
+
+![](T4_Ex_33.png) 
+
+
 Llicenciat sota la  [Llicència Creative Commons Reconeixement NoComercial
 SenseObraDerivada 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/)
 
