@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://asalvadorc.github.io/BBDD_Tema4/BD-T04_Normalizacion/2_primer_forma_normal_1fn/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>2. Primer Forma Normal (1FN) - BD - Bases de Dades</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+        <link href="../../img/favicon.ico" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "2. Primer Forma Normal (1FN)";
+        var mkdocs_page_input_path = "BD-T04_Normalizacion/2_primer_forma_normal_1fn.md";
+        var mkdocs_page_url = "/BBDD_Tema4/BD-T04_Normalizacion/2_primer_forma_normal_1fn/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../assets/logocaminas.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Normalització</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../objectius/">Objectius</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1_introducci/">1. Introducció</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">2. Primer Forma Normal (1FN)</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../3_dependncia_funcional/">3.  Dependència Funcional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4_segona_forma_normal_2fn/">4. Segona Forma Normal (2FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../5_dependncia_funcional_transitiva/">5. Dependència Funcional Transitiva</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../6_tercera_forma_normal_3fn/">6. Tercera Forma Normal (3FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../7_forma_normal_boycecodd_fnbc/">7. Forma Normal Boyce-Codd (FNBC)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exemple_complet/">Exemple Complet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resum/">Resum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercicis/">Exercicis</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BD - Bases de Dades</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Normalització</li>
+      <li class="breadcrumb-item active">2. Primer Forma Normal (1FN)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="2-primer-forma-normal-1fn">2. Primer Forma Normal (1FN)</h1>
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula està en 1FN si i només si els valors que componen cada
+atribut d'una tupla són atòmics. És a dir, en un atribut no han d'aparèixer
+valors repetitius.</div>
+<hr />
+<p>Per exemple, en la següent taula hi ha una sèrie de tipus de materials
+existents en una ferreteria. Un material té un codi que l'identifica, la seua
+descripció i les seues mides (la clau principal és el camp subratllat)</p>
+<p><strong>MATERIALS</strong></p>
+<table>
+<thead>
+<tr>
+<th><u><strong>COD-MAT</strong></u></th>
+<th><strong>DESCRIPCIÓ</strong></th>
+<th><strong>MIDES</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>039</td>
+<td>Cargol</td>
+<td>3,5 - 5 - 7 - 9</td>
+</tr>
+<tr>
+<td>067</td>
+<td>Arandella</td>
+<td>2 - 5</td>
+</tr>
+<tr>
+<td>461</td>
+<td>Broca</td>
+<td>2,5 - 3 - 3,5</td>
+</tr>
+</tbody>
+</table>
+<p>Els problemes que planteja <strong>el camp MIDES</strong> són els següents:</p>
+<ul>
+<li>
+<p>La falta de espai en el camp per als valors que puguen aparèixer o, pel contrari el desaprofitament de l'atribut quan existeixen pocs valors. </p>
+</li>
+<li>
+<p>La dificultat del tractament per a actualitzacions, consultes i recerques d'un valor determinat. </p>
+</li>
+</ul>
+<p><strong><u>Posar en 1FN</u></strong></p>
+<p>Per a passar a 1FN una taula que no ho estava <strong>es descompon</strong> en <strong>dues</strong>
+distintes:</p>
+<p><strong>A)</strong> La <strong>primera taula</strong> serà la projecció de la taula original sobre els
+següents atributs:</p>
+<ul>
+<li>La clau de la taula original. </li>
+<li>Els atributs atòmics (els que contenen valors únics). </li>
+</ul>
+<p><strong>MATERIALS</strong></p>
+<table>
+<thead>
+<tr>
+<th><u><strong>COD-MAT</strong></u></th>
+<th><strong>DESCRIPCIÓ</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>039</td>
+<td>Cargol</td>
+</tr>
+<tr>
+<td>067</td>
+<td>Arandella</td>
+</tr>
+<tr>
+<td>461</td>
+<td>Broca</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B)</strong> La <strong>segona taula</strong> serà la projecció de la taula original sobre els
+següents atributs:</p>
+<ul>
+<li>La clau de la taula original. </li>
+<li>Els atributs que tenen valors múltiples, distribuint aquestos valors múltiples en tuples distintes i per tant en una fila existirà un únic valor elemental. </li>
+</ul>
+<blockquote>
+<p>La clau d'aquesta segona taula estarà formada per tots els atributs.</p>
+</blockquote>
+<p><strong>MAT-MIDES</strong></p>
+<table>
+<thead>
+<tr>
+<th><u><strong>COD-MAT</strong></u></th>
+<th><strong>MIDA</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>039</td>
+<td>3,5</td>
+</tr>
+<tr>
+<td>039</td>
+<td>5</td>
+</tr>
+<tr>
+<td>039</td>
+<td>7</td>
+</tr>
+<tr>
+<td>039</td>
+<td>9</td>
+</tr>
+<tr>
+<td>067</td>
+<td>2</td>
+</tr>
+<tr>
+<td>067</td>
+<td>5</td>
+</tr>
+<tr>
+<td>461</td>
+<td>2,5</td>
+</tr>
+<tr>
+<td>461</td>
+<td>3</td>
+</tr>
+<tr>
+<td>461</td>
+<td>3,5</td>
+</tr>
+</tbody>
+</table>
+<p><u><strong>Nota</strong></u> </p>
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+També haurem de ser capaços de detectar que no està en 1FN quan tenim uns
+atributs multivaluats "encoberts". Per exemple, una variant de l'exemple
+anterior podria ser:
+</div>
+<p></p>
+
+<p><strong>MATERIALS</strong></p>
+<table>
+<thead>
+<tr>
+<th><u><strong>COD-MAT</strong></u></th>
+<th><strong>DESCRIPCIÓ</strong></th>
+<th><strong>MIDA1</strong></th>
+<th><strong>MIDA2</strong></th>
+<th><strong>MIDA3</strong></th>
+<th><strong>MIDA4</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>039</td>
+<td>Cargol</td>
+<td>3,5</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+</tr>
+<tr>
+<td>067</td>
+<td>Arandella</td>
+<td>2</td>
+<td>5</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>461</td>
+<td>Broca</td>
+<td>2,5</td>
+<td>3</td>
+<td>3,5</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Es veu que es tracta d'una manera de "dissimular" els atributs multivaluats.
+Estem davant del mateix cas que en l'exemple de dalt i tindrem els mateixos
+problemes, i per tant la solució és la mateixa.  </p>
+<p>Llicenciat sota la  <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Llicència Creative Commons Reconeixement NoComercial
+SenseObraDerivada 3.0</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../1_introducci/" class="btn btn-neutral float-left" title="1. Introducció"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../3_dependncia_funcional/" class="btn btn-neutral float-right" title="3.  Dependència Funcional">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../1_introducci/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../3_dependncia_funcional/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
