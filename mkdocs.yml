@@ -17,6 +17,7 @@ nav:
     - 5. Dependència Funcional Transitiva: BD-T04_Normalizacion/5_dependncia_funcional_transitiva.md
     - 6. Tercera Forma Normal (3FN): BD-T04_Normalizacion/6_tercera_forma_normal_3fn.md
     - 7. Forma Normal Boyce-Codd (FNBC): BD-T04_Normalizacion/7_forma_normal_boycecodd_fnbc.md
+    - Exemple Complet: BD-T04_Normalizacion/Exemple_complet.md
     - Resum: BD-T04_Normalizacion/resum.md
     - Exercicis: BD-T04_Normalizacion/exercicis.md
     
