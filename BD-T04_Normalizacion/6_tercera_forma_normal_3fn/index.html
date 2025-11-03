@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://asalvadorc.github.io/BBDD_Tema4/BD-T04_Normalizacion/6_tercera_forma_normal_3fn/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>6. Tercera Forma Normal (3FN) - BD - Bases de Dades</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+        <link href="../../img/favicon.ico" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "6. Tercera Forma Normal (3FN)";
+        var mkdocs_page_input_path = "BD-T04_Normalizacion/6_tercera_forma_normal_3fn.md";
+        var mkdocs_page_url = "/BBDD_Tema4/BD-T04_Normalizacion/6_tercera_forma_normal_3fn/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../assets/logocaminas.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Normalització</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../objectius/">Objectius</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1_introducci/">1. Introducció</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../2_primer_forma_normal_1fn/">2. Primer Forma Normal (1FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../3_dependncia_funcional/">3.  Dependència Funcional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4_segona_forma_normal_2fn/">4. Segona Forma Normal (2FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../5_dependncia_funcional_transitiva/">5. Dependència Funcional Transitiva</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">6. Tercera Forma Normal (3FN)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1"></a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../7_forma_normal_boycecodd_fnbc/">7. Forma Normal Boyce-Codd (FNBC)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exemple_complet/">Exemple Complet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resum/">Resum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercicis/">Exercicis</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BD - Bases de Dades</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Normalització</li>
+      <li class="breadcrumb-item active">6. Tercera Forma Normal (3FN)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="6-tercera-forma-normal-3fn">6. Tercera Forma Normal (3FN)</h1>
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula es diu que està en 3FN si i només si es compleixen dues
+condicions:
+<ul>
+  <li>Es troba en 2FN.</li>
+  <li>No existeixen atributs no primaris (atributs que no formen part de la clau principal) que són transitivament dependents de cada clau candidata de la taula.</li>
+</ul>
+</div>
+<p></p>
+<h2 id="_1"></h2>
+<p>Açò vol dir que un atribut secundari només es pot conèixer a través de la clau
+principal o claus candidates de la taula i no per mig d'un altre atribut no
+primari.</p>
+<p>En el graf de dependències només han de mostrar-se les dependències
+transitives i no aquelles dependències funcionals a partir de les claus
+candidates, perquè se sap que per ser claus ja coneixen tots els atributs.</p>
+<p>Exemple: A és la clau principal, B és una clau candidata i es donen les
+següents dependències:</p>
+<p><strong>A</strong> →<strong>B B</strong> →<strong>A C</strong> →<strong>D</strong></p>
+<p><strong>A</strong> →<strong>C B</strong> →<strong>C C</strong> →<strong>E</strong></p>
+<p><strong>A</strong> →<strong>D B</strong> →<strong>D</strong></p>
+<p><strong>A</strong> →<strong>E B</strong> →<strong>E</strong></p>
+<p>El graf queda del següent mode:  </p>
+<p><img alt="" src="../T4_6_1.png" />   O bé    <img alt="" src="../T4_6_2.png" />  </p>
+<p>Les fletxes que mostren les dependències funcionals que té la clau candidata B
+no es representen (com hem dit anteriorment) perquè són evidents i no
+simplifiquen la visió del graf. A més a més, per a la normalització, no es
+necessiten per a res; pel contrari, solen complicar l'anàlisi.</p>
+<p>La taula T no està en 3FN ja que els atributs D i E són transitivament
+dependents respecte de la clau A.</p>
+<p><strong><u>Posar en 3FN</u></strong></p>
+<p>Per a normalitzar una taula que no estiga en tercera forma normal, és a dir,
+que tinga dependències transitives, descompondrem la taula en més d'una taula:</p>
+<p><strong>A)</strong> Una <strong>primera taula</strong> amb la clau principal més els atributs que no
+depenen transitivament</p>
+<blockquote>
+<p><img alt="" src="../T4_6_3.png" /></p>
+</blockquote>
+<p><strong>B)</strong> Una <strong>segona taula</strong> amb els atributs que depenen transitivament, més
+l'atribut de qui depenen, que serà clau principal</p>
+<blockquote>
+<p><img alt="" src="../T4_6_4.png" /><br />
+</p>
+</blockquote>
+<p>Es farà una descomposició per cada dependència transitiva que hi haja que
+afecte a camps distints.</p>
+<p>Per a l'exemple dels atributs NUMMAT, GRUP i AULAGRUP tenim el següent graf:</p>
+<p><img alt="" src="../T4_6_5.png" />  </p>
+<p>Una vegada descomposta la taula en dos segons l'algoritme anterior, tindrem
+dues taules</p>
+<hr />
+<p><img alt="" src="../T4_6_6.png" /></p>
+<p>Les dues taules resultants sí que es troben en 3FN.</p>
+<p>De manera que la representació de les taules al <strong>model relacional</strong> quedaria de la manera següent:</p>
+<pre><cod>
+    ALUMNES(<b>nummat</b>,grup)
+    GRUPS(<b>grup</b>,aulagrup)
+</cod></pre>
+<hr />
+<p>I a l'exemple vist a l'apartat 3.3 </p>
+<p><img alt="" src="../T4_3_3_ej.png" /></p>
+<p><img alt="" src="../T4_3_1.png" /></p>
+<p>La solució quedaria així:</p>
+<p><img alt="" src="../T4_6ej.png" /> </p>
+<p><img alt="" src="../T4_Ex_33.png" /> </p>
+<p>Llicenciat sota la  <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Llicència Creative Commons Reconeixement NoComercial
+SenseObraDerivada 3.0</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../5_dependncia_funcional_transitiva/" class="btn btn-neutral float-left" title="5. Dependència Funcional Transitiva"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../7_forma_normal_boycecodd_fnbc/" class="btn btn-neutral float-right" title="7. Forma Normal Boyce-Codd (FNBC)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../5_dependncia_funcional_transitiva/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../7_forma_normal_boycecodd_fnbc/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

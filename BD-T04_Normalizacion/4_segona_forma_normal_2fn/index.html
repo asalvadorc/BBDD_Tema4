@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://asalvadorc.github.io/BBDD_Tema4/BD-T04_Normalizacion/4_segona_forma_normal_2fn/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>4. Segona Forma Normal (2FN) - BD - Bases de Dades</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+        <link href="../../img/favicon.ico" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "4. Segona Forma Normal (2FN)";
+        var mkdocs_page_input_path = "BD-T04_Normalizacion/4_segona_forma_normal_2fn.md";
+        var mkdocs_page_url = "/BBDD_Tema4/BD-T04_Normalizacion/4_segona_forma_normal_2fn/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../assets/logocaminas.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Normalització</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../objectius/">Objectius</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1_introducci/">1. Introducció</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../2_primer_forma_normal_1fn/">2. Primer Forma Normal (1FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../3_dependncia_funcional/">3.  Dependència Funcional</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">4. Segona Forma Normal (2FN)</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../5_dependncia_funcional_transitiva/">5. Dependència Funcional Transitiva</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../6_tercera_forma_normal_3fn/">6. Tercera Forma Normal (3FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../7_forma_normal_boycecodd_fnbc/">7. Forma Normal Boyce-Codd (FNBC)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exemple_complet/">Exemple Complet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resum/">Resum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercicis/">Exercicis</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BD - Bases de Dades</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Normalització</li>
+      <li class="breadcrumb-item active">4. Segona Forma Normal (2FN)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="4-segona-forma-normal-2fn">4. Segona Forma Normal (2FN)</h1>
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Una taula es diu que està en 2FN si i només si compleix dues condicions:
+<ul>
+    <li>Es troba en 1FN.</li>
+    <li>Tot atribut secundari (aquells que no pertanyen a la clau principal, els que es troben fora de la caixa) depèn totalment (té una dependència funcional total) de la clau completa i, per tant, no d'una part d'ella.</li>
+</ul>    
+</div>
+<p></p>
+
+<hr />
+<p>Aquesta forma normal només es considera si la clau principal és composta, i
+per tant, està formada per diversos atributs.</p>
+<p>Si una taula <strong>T</strong> té com a atributs <strong>A, B, C, D</strong> i la clau és <strong>A . B</strong>
+complint-se les dependències:</p>
+<p><strong>A . B</strong> →<strong>C</strong></p>
+<p><strong>B</strong> →<strong>D</strong></p>
+<p>S'observa que la taula no es troba en 2FN ja que l'atribut D no té una
+dependència funcional total amb la clau completa A . B , sinó amb una part de
+la clau (B). El graf de les dependències funcionals seria:  </p>
+<p><img alt="" src="../T4_4_1.png" /></p>
+<hr />
+<p><strong>Si existeix una fletxa que ix de l'interior de la caixa que engloba la clau,
+aleshores la taula no està en 2FN.</strong></p>
+<hr />
+<p><strong><u>Posar en 2FN</u></strong></p>
+<p>Per a convertir una taula que no està en segona forma normal a 2FN, es
+realitza una projecció i es crea:</p>
+<p><strong>A)</strong> Una <strong>primera taula</strong> amb la clau i totes les seues dependències totals
+amb els atributs secundaris afectats:</p>
+<blockquote>
+<p><img alt="" src="../T4_4_2.png" /><br />
+</p>
+</blockquote>
+<hr />
+<p><strong>B)</strong> Una <strong>segona taula</strong> amb la part de la clau que té dependències, i els
+atributs secundaris implicats:</p>
+<blockquote>
+<p><img alt="" src="../T4_4_3.png" /></p>
+</blockquote>
+<hr />
+<blockquote>
+<p>La clau de la nova taula T2 serà l'antiga part de la clau.</p>
+</blockquote>
+<p><strong>Exemple</strong> : Taula amb les persones que treballen en diverses empreses amb
+el sou corresponent, amb els atributs: <strong>DNI , NOM , EMPRESA , SOU</strong></p>
+<p>Entre els atributs existeixen les dependències:</p>
+<hr />
+<p><strong>DNI</strong> →<strong>NOM</strong></p>
+<p><strong>DNI . EMPRESA</strong> →<strong>SOU</strong></p>
+<p>El graf que mostra les dependències és el següent:</p>
+<p><img alt="" src="../T4_4_4.png" /></p>
+<p>És evident que la taula no es troba en 2FN, després de normalitzar s'obté:</p>
+<p><img alt="" src="../T4_4_5.png" /></p>
+<p>De manera que la representació de les taules al <strong>model relacional</strong> quedaria de la manera següent:</p>
+<pre><cod>
+            EMPLEADO(<b>dni,empresa</b>,sueldo)
+            PERSONA(<b>dni</b>,nombre)
+</cod></pre>
+
+<hr />
+<p>Llicenciat sota la  <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Llicència Creative Commons Reconeixement NoComercial
+SenseObraDerivada 3.0</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../3_dependncia_funcional/" class="btn btn-neutral float-left" title="3.  Dependència Funcional"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../5_dependncia_funcional_transitiva/" class="btn btn-neutral float-right" title="5. Dependència Funcional Transitiva">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../3_dependncia_funcional/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../5_dependncia_funcional_transitiva/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

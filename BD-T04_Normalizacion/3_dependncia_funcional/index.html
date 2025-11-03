@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://asalvadorc.github.io/BBDD_Tema4/BD-T04_Normalizacion/3_dependncia_funcional/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>3.  Dependència Funcional - BD - Bases de Dades</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/extra.css" rel="stylesheet" />
+        <link href="../../img/favicon.ico" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "3.  Depend\u00e8ncia Funcional";
+        var mkdocs_page_input_path = "BD-T04_Normalizacion/3_dependncia_funcional.md";
+        var mkdocs_page_url = "/BBDD_Tema4/BD-T04_Normalizacion/3_dependncia_funcional/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../assets/logocaminas.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Normalització</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../objectius/">Objectius</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1_introducci/">1. Introducció</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../2_primer_forma_normal_1fn/">2. Primer Forma Normal (1FN)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">3.  Dependència Funcional</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#32-dependencia-funcional-total">3.2 Dependència Funcional Total</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#33-graf-de-les-dependencies-funcionals">3.3 Graf de les Dependències Funcionals</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../4_segona_forma_normal_2fn/">4. Segona Forma Normal (2FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../5_dependncia_funcional_transitiva/">5. Dependència Funcional Transitiva</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../6_tercera_forma_normal_3fn/">6. Tercera Forma Normal (3FN)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../7_forma_normal_boycecodd_fnbc/">7. Forma Normal Boyce-Codd (FNBC)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Exemple_complet/">Exemple Complet</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../resum/">Resum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exercicis/">Exercicis</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">BD - Bases de Dades</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Normalització</li>
+      <li class="breadcrumb-item active">3.  Dependència Funcional</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="3-dependencia-funcional">3. Dependència Funcional</h1>
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Un atribut o conjunt d'atributs <b>Y</b> depèn funcionalment de l'atribut o
+conjunt de atributs <b>X</b> , i es representa com <br>
+<b>X → Y</b> , si i només si cada valor de X es correspon amb un únic valor de Y.  
+</div>
+<p></p>
+
+<p>Per exemple, entre DNI i NOM existeix una dependència funcional, ja que el
+valor DNI es correspon amb un únic nom.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>DNI</strong> →<strong>NOM</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>En aquest cas (suposant que el NOM és únic i no existeixen dos noms iguals)
+s'acompleix també la dependència</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>NOM</strong> →<strong>DNI</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>i ho podríem abreviar per</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>DNI</strong> ←→<strong>NOM</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>No sempre es dóna de forma biunívoca la dependència funcional entre dos
+atributs, es més, en pocs casos succeeix. Per exemple, entre els atributs DNI
+i ADREÇA existeix una dependència funcional ja que una persona identificada
+pel seu DNI viu en una única ADREÇA.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>DNI</strong> →<strong>ADRECA</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Però en aquest cas no es dóna la dependència en sentit invers, perquè en una
+ADREÇA viuen unes quantes persones. A més, l'adreça no ens diu ni tan sols la
+ciutat on es troba (per exemple, el "C/ Major, 7" es troba en moltes ciutats)</p>
+<p>Hi ha atributs que no tenen entre ells una dependència funcional com és el cas
+de ADREÇA i DATA_NAIXEMENT.</p>
+<p>En moltes ocasions, per a determinar un únic valor d'un atribut, no és
+suficient amb conèixer el valor d'un altre atribut, sinó que és necessari
+trobar els valors d'uns quants atributs. Això és el que passa, si tenim els
+atributs: DNI, EMPRESA i SOU, i sabem que una persona pot treballar en més
+d'una empresa. Entre els atributs DNI i SOU no existeix cap dependència
+funcional, ja que un individu pot guanyar sous distints en empreses distintes.
+Però si coneixem l'empresa en la qual treballa, sí que podem dir que:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>DNI . EMPRESA</strong> →<strong>SOU</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>L'operador punt "." representa l'expressió "junt amb" o "i" entre els dos
+atributs i l'operador barra "|" fa referència a l'expressió "o també".</p>
+<p>Per tant, podem dir que DNI "junt amb" EMPRESA determinen el SOU. I per a la
+dependència:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>DNI</strong> →<strong>NOM | ADRECA</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>direm que amb el DNI es coneix el NOM "o també" l'ADREÇA.</p>
+<h2 id="32-dependencia-funcional-total">3.2 Dependència Funcional Total</h2>
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Es diu que l'atribut <b>Y</b> té una <b>dependència funcional total</b> de l'atribut
+<b>X</b> si té una dependència funcional de X i NO depèn funcionalment de cap
+subconjunt de X.  
+</div>
+<p></p>
+<hr />
+<p>Per exemple, una dependència funcional seria:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>DNI . EMPRESA</strong> →<strong>NOM</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Però, lògicament, aquesta dependència no és total ja que NOM depèn
+funcionalment de DNI. Per això, a aquesta dependència s'anomena <strong>dependència
+parcial</strong>.</p>
+<p>La <strong>dependència funcional total</strong> seria:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p><strong>DNI . EMPRESA</strong> →<strong>SOU</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Ara sí, el SOU no depèn funcionalment de cap subconjunt.</p>
+<p>És evident que si X està format únicament per un atribut, la dependència
+funcional serà total.</p>
+<div style="background-color: #d6eaf8; color: black; padding: 5px;"> 
+Les dependències que ens interessen per a la normalització són sempre les dependències funcionals totals.
+</div>
+</p>
+<h2 id="33-graf-de-les-dependencies-funcionals">3.3 Graf de les Dependències Funcionals</h2>
+<p>Serveix per a mostrar gràficament la relació existent entre tots els atributs
+i és una forma clara de tenir una visió general de les dades i de la cohesió
+existent entre elles. La clau principal es representa dins d'una caixa de
+línies contínues amb els seus atributs primaris. La resta dels atributs es
+representa fora de la caixa.</p>
+<p>Si existeixen dependències d'un conjunt d'atributs que no són la clau, aniran
+dins d'una caixa de línies discontínues per a no confondre-ho amb la clau
+principal de la taula.</p>
+<p><strong>Exemple:</strong></p>
+<p><img alt="" src="../T4_3_3_ej.png" /></p>
+<p>Esta tabla refleja un conjunto de pedidos y cumple con las dependencias funcionales especificadas:</p>
+<ul>
+<li>A,B,C→M,S: La combinación del <strong>ID Cliente, Región e ID Producto</strong> determina de manera única el <strong>ID Pedido y la Fecha de Pedido</strong>. </li>
+<li>M→N: Cada <strong>ID de Pedido</strong> tiene una cantidad asociada (<strong>Cantidad</strong>). </li>
+<li>B,C→O,R: La combinación de <strong>Región e ID Producto</strong> determina de manera única el <strong>Nombre del Producto y el Precio Unitario</strong> (puede variar según la región). </li>
+<li>O→P: El <strong>Nombre del Producto</strong> determina su <strong>Categoría</strong>. </li>
+<li>C→Q: El <strong>ID de Producto</strong> determina el <strong>Impuesto por Región</strong>, ya que depende del tipo de producto. </li>
+</ul>
+<hr />
+<p><strong>A . B . C</strong> →<strong>M | S</strong><br />
+<strong>M</strong> →<strong>N</strong><br />
+<strong>B . C</strong> →<strong>O | R</strong><br />
+<strong>O</strong> →<strong>P</strong><br />
+<strong>C</strong> →<strong>Q</strong><br />
+<strong>(clau = A . B . C)</strong></p>
+<p>El graf associat és:</p>
+<p><img alt="" src="../T4_3_1.png" /></p>
+<p>Llicenciat sota la  <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Llicència Creative Commons Reconeixement NoComercial
+SenseObraDerivada 3.0</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../2_primer_forma_normal_1fn/" class="btn btn-neutral float-left" title="2. Primer Forma Normal (1FN)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../4_segona_forma_normal_2fn/" class="btn btn-neutral float-right" title="4. Segona Forma Normal (2FN)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../2_primer_forma_normal_1fn/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../4_segona_forma_normal_2fn/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
