@@ -94,6 +94,8 @@ De manera que la representació de les taules al **model relacional** quedaria d
 
 I a l'exemple vist a l'apartat 3.3 
 
+![](T4_3_3_ej.png)
+
 ![](T4_3_1.png)
 
 La solució quedaria així:
